@@ -1,76 +1,160 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Css/bootstrap.css">
+    <link rel="stylesheet" href="./Css/font-awesome.css">
 </head>
 
 <body>
-
     <div class="container">
-        <div class="col-6">
-            <form action="" method="get">
-                <fieldset>
-                    <!--inicio form-->
-                    <legend>Cadastro de Contato</legend>
-                    <div class="form-group">
-                        <!--inicio campo nome-->
-                        <label for="nome">Nome</label>
-                        <input type="text" class="form-control" name="nome" id="nome">
-                    </div>
-                    <!--final campo nome-->
-                    <div class="form-group">
-                        <label for="text">Fone</label>
-                        <input type="tel" class="form-control" name="fone" id="fone">
-                    </div>
-                </fieldset>
-        </div>
-        <!--final form-->
-        </form>
-
-        <div class="col-6">
-            <!--inicio da tabela-->
-            <div class="form-group">
-
-                <div class="form-check form-check-inline"></div>
-                <label for="Masc">
-                    <input type="radio" name="sexo" id="sexo"> Masculino
-                </label>
-
-                <div class="form-check form-check-inline"></div>
-                <label for="femi">
-                    <input type="radio" name="sexo" id="sexo"> Feminino
-
-                    <div class="form-check form-check-inline"></div>
-                    <label for="Indef">
-                        <input type="radio" name="sexo" id="sexo"> Não Especificar
+        <div class="row">
+            <div class="col-6">
+                <!--Inicio do Formulario-->
+                <form action="" method="get">
+                    <fieldset>
+                        <legend>Cadastro de Contato</legend>
+                        <div class="form-group">
+                            <!--Inicio do campo Nome-->
+                            <label for="nome">Nome</label>
+                            <input type="text" class="form-control" name="nome" id="nome">
+                        </div>
+                        <!--Final do campo Nome-->
+                        <div class="form-group">
+                            <!--Inicio do campo Fone-->
+                            <label for="fone">Fone</label>
+                            <input type="tel" class="form-control" name="fone" id="fone">
+                        </div>
+                        <!--Final do campo Fone-->
+                        <div class="form-group">
+                            <!--Inicio do campo Sexo-->
+                            <div class="form-check form-check-inline">
+                                <label for="masc">
+                                    <input type="radio" name="sexo" id="masc" checked> Masculino
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="fem">
+                                    <input type="radio" name="sexo" id="fem"> Feminino
+                                </label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <label for="indef">
+                                    <input type="radio" name="sexo" id="indef"> Não especificar
+                                </label>
+                            </div>
+                        </div>
+                        <!--Final do campo Sexo-->
+                        <div class="form-group">
+                            <!--Inicio do campo Cidade-->
+                            <label for="cidade">Cidade</label>
+                            <select class="form-control" name="cidade" id="cidade">
+                                <option>Natal</option>
+                                <option>Mossoró</option>
+                                <option>Parnamirim</option>
+                                <option>São Gonçalo do Amarante</option>
+                            </select>
+                        </div>
+                        <!--Final do campo Cidade-->
+                        <div class="form-group">
+                            <!--Inicio do campo de Botões-->
+                            <button type="submit" class="btn btn-success">Salvar</button>
+                            <button type="reset" class="btn btn-danger">Limpar</button>
+                        </div>
+                        <!--Final do campo de Botões-->
+                    </fieldset>
+                </form>
             </div>
-            <!--final campo sexo-->
+            <!--Final do Formulario-->
+            <div class="col-6">
+                <!--Inicio da Tabela-->
+                <fieldset>
+                    <legend>Lista de Contatos</legend>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>id</th>
+                                <th>Nome</th>
+                                <th>Telefone</th>
+                                <th>Sexo</th>
+                                <th>Cidade</th>
+                                <th>Ações</th>
+                            </tr>
 
-            <!--inicio campo cidade-->
-            <div class="formgroup"></div> Cidade:
-            <label for="cidade"></label>
-            <select class="form-control" name="cidade" id="cidade">
-                <option>Natal</option>
-                <option>Mossoró</option>
-                <option>Parnamirim</option>
-                <option>Fortaleza</option>
-            </select>
-            <!--final campo cidade-->
-            <div class="form-group"> <!--inicio campo botões-->
-                <button type="submit" class="btn btn-success">Salvar</button>
-                <button type="submit" class="btn btn-danger">Limpar</button>
-            </div> <!--final campo botões-->
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>José</td>
+                                <td>333-333</td>
+                                <td>Masculino</td>
+                                <td>Natal</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>Maria</td>
+                                <td>888-333</td>
+                                <td>Feminino</td>
+                                <td>Natal</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>Joaquim</td>
+                                <td>222-333</td>
+                                <td>Masculino</td>
+                                <td>Natal</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>Norma</td>
+                                <td>444-333</td>
+                                <td>Feminino</td>
+                                <td>Natal</td>
+                                <td>
+                                    <button class="btn btn-primary btn-sm">
+                                        <i class="fas fa-pencil-alt"></i>
+                                    </button>
+                                    <button class="btn btn-danger btn-sm">
+                                        <i class="fas fa-trash-alt"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </fieldset>
+            </div>
+            <!--Final da Tabela -->
         </div>
     </div>
-    <!--final da tabela-->
-    </div>
-    <div class="row">
-
 </body>
 
 </html>
